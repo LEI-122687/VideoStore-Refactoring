@@ -6,7 +6,7 @@ Selecione o ficheiro db40.jar que está na pasta lib para que a execucao seja po
 
 LEI-122712 Joana
 
-LEI-122687 Junzun
+LEI-122687 Junzun.
 
 LEI-122714 Mafalda
 
