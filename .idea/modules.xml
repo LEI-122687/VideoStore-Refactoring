@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VideoStore_Refactoring.iml" filepath="$PROJECT_DIR$/VideoStore_Refactoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VideoStore-Refactoring.iml" filepath="$PROJECT_DIR$/VideoStore-Refactoring.iml" />
     </modules>
   </component>
 </project>
