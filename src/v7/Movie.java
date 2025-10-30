@@ -1,50 +1,30 @@
 package v7;
 
 public class Movie {
+    // 'Code' enum foi removido daqui
 
-	public enum Code {REGULAR, CHILDRENS, NEW_RELEASE};
-	
-	private String _title;
-	private Code _priceCode;
-	
-	public Movie(String title, Code priceCode) {
-		_title = title;
-		_priceCode = priceCode;
-	}
+    private String _title;
+    // '_priceCode' foi substituído por '_price'
+    private Price _price;
 
-	public String getTitle() {
-		return _title;
-	}
-	
-	public Code getPriceCode() {
-		return _priceCode;
-	}
+    // Construtor modificado para usar 'Price.Code'
+    public Movie(String title, Price.Code priceCode) {
+        _title = title;
+        // Instancia o objeto 'Price'
+        _price = new Price(priceCode);
+    }
 
-	public double getRentalAmount(int duration)
-	{
-		double result = 0;
-	
-		switch (_priceCode)
-		{
-			case REGULAR:
-				result += 2;
-				if (duration > 2)
-					result += (duration - 2) * 1.5;
-				break;
-			case NEW_RELEASE:
-				result += duration * 3;
-				break;
-			case CHILDRENS:
-				result += 1.5;
-				if (duration > 3)
-					result += (duration - 3) * 1.5;
-				break;
-		}
-		return result;
-	}
+    public String getTitle() {
+        return _title;
+    }
 
-	public int getFrequentRentalPoints(int duration)
-	{
-		return (_priceCode == Code.NEW_RELEASE) && duration > 1 ? 2 : 1;
-	}		
+    // Novo getter para o objeto 'Price'
+    public Price getPrice()
+    {
+        return _price;
+    }
+
+    // 'getRentalAmount' foi removido (movido para 'Price')
+
+    // 'getFrequentRentalPoints' foi removido (movido para 'Price')
 }

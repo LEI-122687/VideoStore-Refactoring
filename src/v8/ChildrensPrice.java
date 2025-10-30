@@ -1,0 +1,19 @@
+package v8;
+
+public class ChildrensPrice extends Price
+{
+    @Override
+    public double getRentalAmount(int duration)
+    {
+        double result = 1.5;
+        if (duration > 3)
+            result += (duration - 3) * 1.5;
+        return result;
+    }
+
+    @Override
+    public int getFrequentRentalPoints(int duration)
+    {
+        return 1; // Lógica de pontos para CHILDRENS
+    }
+}
