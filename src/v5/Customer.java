@@ -67,4 +67,5 @@ public class Customer
             totalAmount += each.getAmount();
         return totalAmount;
     }
+
 }
